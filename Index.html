@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Free Fire Esports – সম্পূর্ণ টিম বিল্ডিং গাইড (A–Z)</title>
+<meta name="description" content="Free Fire Esports টিম তৈরি, রোল ডিফাইন, স্কাউটিং, ট্রেনিং, স্ট্র্যাটেজি, টুর্নামেন্ট প্রেপ – সবকিছু এক পেজে।" />
+<style>
+  :root{
+    --bg:#0f172a;        /* slate-900 */
+    --card:#111827;      /* gray-900 */
+    --muted:#94a3b8;     /* slate-400 */
+    --text:#e5e7eb;      /* gray-200 */
+    --brand:#22d3ee;     /* cyan-400 */
+    --accent:#a78bfa;    /* violet-400 */
+    --ok:#34d399;        /* emerald-400 */
+    --warn:#f59e0b;      /* amber-500 */
+    --bad:#f43f5e;       /* rose-500 */
+    --chip:#1f2937;      /* gray-800 */
+    --border:#1f2937;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:radial-gradient(1200px 600px at 80% -10%, rgba(34,211,238,.15), transparent 60%), radial-gradient(1000px 500px at 10% -10%, rgba(167,139,250,.12), transparent 60%), var(--bg); color:var(--text); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Noto Sans, "Apple Color Emoji","Segoe UI Emoji";}
+  a{color:var(--brand); text-decoration:none}
+  a:hover{text-decoration:underline}
+  .container{max-width:1100px; margin:0 auto; padding:24px}
+  header{
+    position:sticky; top:0; z-index:50;
+    backdrop-filter: blur(10px);
+    background:rgba(15,23,42,.7);
+    border-bottom:1px solid var(--border);
+  }
+  .nav{display:flex; align-items:center; gap:16px; justify-content:space-between; padding:10px 24px}
+  .brand{display:flex; align-items:center; gap:12px}
+  .logo{width:36px;height:36px;border-radius:12px; background:linear-gradient(135deg,var(--brand),var(--accent)); box-shadow:0 0 30px rgba(34,211,238,.35)}
+  .title{font-weight:800; letter-spacing:.3px}
+  .toc{display:flex; flex-wrap:wrap; gap:10px}
+  .chip{padding:8px 12px; border-radius:999px; background:var(--chip); border:1px solid var(--border); color:var(--muted); font-size:14px; cursor:pointer}
+  .chip:hover{color:var(--text); border-color:var(--accent)}
+  .hero{display:grid; grid-template-columns:1.2fr .8fr; gap:20px; padding:28px 24px; align-items:center}
+  .hero h1{font-size:32px; margin:0 0 10px}
+  .hero p{color:var(--muted); margin:0}
+  .cta-row{display:flex; gap:10px; margin-top:16px}
+  .btn{padding:10px 14px; border:1px solid var(--border); border-radius:12px; background:linear-gradient(135deg,rgba(34,211,238,.08),rgba(167,139,250,.08)); color:var(--text); cursor:pointer}
+  .btn:hover{border-color:var(--brand)}
+  .btn-ghost{background:transparent}
+  .grid{display:grid; grid-template-columns:repeat(12,1fr); gap:16px; margin-top:20px}
+  .card{grid-column:span 12; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.01)); border:1px solid var(--border); border-radius:16px; padding:18px}
+  .card h2{margin:0 0 8px; font-size:22px}
+  .muted{color:var(--muted); font-size:14px}
+  .split{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+  .kpi{display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:10px}
+  .kpi .tile{background:var(--chip); border:1px solid var(--border); border-radius:12px; padding:10px}
+  ul,ol{margin:8px 0 8px 18px}
+  code.k{background:var(--chip); padding:2px 6px; border-radius:6px; border:1px solid var(--border)}
+  table{width:100%; border-collapse:collapse; margin-top:8px; font-size:14px}
+  th,td{border:1px solid var(--border); padding:10px; text-align:left}
+  th{background:rgba(255,255,255,.03)}
+  .tag{display:inline-block; padding:4px 8px; border-radius:999px; background:var(--chip); border:1px solid var(--border); font-size:12px; color:var(--muted); margin-right:6px; margin-bottom:6px}
+  .callout{border-left:4px solid var(--ok); padding:10px 12px; background:rgba(52,211,153,.05); border-radius:8px; margin-top:8px}
+  .warn{border-left-color:var(--warn); background:rgba(245,158,11,.06)}
+  .bad{border-left-color:var(--bad); background:rgba(244,63,94,.06)}
+  footer{margin:36px 0 24px; color:var(--muted); text-align:center}
+  /* responsive */
+  @media (max-width:900px){ .hero{grid-template-columns:1fr} .split{grid-template-columns:1fr} .kpi{grid-template-columns:repeat(2,1fr)} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <div class="logo"></div>
+      <div class="title">Free Fire Esports – Team Builder</div>
+    </div>
+    <div class="toc">
+      <a class="chip" href="#overview">Overview</a>
+      <a class="chip" href="#roles">Team Roles</a>
+      <a class="chip" href="#scouting">Scouting</a>
+      <a class="chip" href="#practice">Practice Plan</a>
+      <a class="chip" href="#macro">Macro</a>
+      <a class="chip" href="#micro">Micro</a>
+      <a class="chip" href="#loadout">Loadouts</a>
+      <a class="chip" href="#maps">Maps</a>
+      <a class="chip" href="#comms">Comms</a>
+      <a class="chip" href="#vod">VOD & Analytics</a>
+      <a class="chip" href="#tournament">Tournament</a>
+      <a class="chip" href="#health">Culture</a>
+    </div>
+  </div>
+</header>
+
+<section class="container hero" id="overview">
+  <div>
+    <h1>একটা পরিপূর্ণ Free Fire Esports টিম বানানোর A–Z গাইড</h1>
+    <p>রাইট রোলে রাইট প্লেয়ার + ডিসিপ্লিন + ড্রিল + ক্লিয়ার কমিউনিকেশন = কনসিসটেন্ট টপ ৩। এই পেজে থাকছে টিম স্ট্রাকচার, রিক্রুটিং, ডেইলি প্র্যাকটিস, ম্যাক্রো-মাইক্রো স্ট্র্যাটেজি, ম্যাপ প্ল্যান, টুর্নামেন্ট প্রেপ—সবকিছু।</p>
+    <div class="cta-row">
+      <button class="btn" onclick="window.print()">🖨️ প্রিন্ট/পিডিএফ</button>
+      <a class="btn btn-ghost" href="#roles">➡️ শুরু করো: Team Roles</a>
+    </div>
+  </div>
+  <div>
+    <div class="card">
+      <h2>Core KPIs</h2>
+      <div class="kpi">
+        <div class="tile"><div class="muted">Avg Placement</div><div><strong>Top 5</strong></div></div>
+        <div class="tile"><div class="muted">Avg Kills</div><div><strong>6–10</strong></div></div>
+        <div class="tile"><div class="muted">Survival</div><div><strong>22–25m</strong></div></div>
+        <div class="tile"><div class="muted">Alive in Zone 4</div><div><strong>3+</strong></div></div>
+      </div>
+      <div class="callout">মনে রাখো: আগ্রেসিভ কিল-হান্ট সবসময় নয়—পজিশনিং + লেট-গেম ম্যান-অ্যাডভান্টেজ বেশি ভ্যালু দেয়।</div>
+    </div>
+  </div>
+</section>
+
+<main class="container grid">
+
+  <!-- Roles -->
+  <section class="card" id="roles">
+    <h2>Team Roles & Responsibilities</h2>
+    <p class="muted">স্ট্যান্ডার্ড ৪–৫ ম্যান রোস্টার: <span class="tag">IGL</span><span class="tag">Rusher/Entry</span><span class="tag">Support</span><span class="tag">Sniper</span><span class="tag">Flex/Grenadier</span></p>
+    <div class="split">
+      <div>
+        <h3>🧭 IGL (In-Game Leader)</h3>
+        <ul>
+          <li>ড্রপ প্ল্যান, রোটেশন টাইমিং, জোন রিডিং—<em>কল ফাইনাল</em>।</li>
+          <li>ইনফো সিঙ্ক: “২ টিম নর্থ, লো গ্রাউন্ড—হোল্ড/রিপজিশন।”</li>
+          <li>লেট-গেম হিল/ইউটিল ট্র্যাক; রিস্ক ম্যানেজমেন্ট।</li>
+        </ul>
+        <div class="callout">ড্রিল: ১০টা গেমের জোন স্ক্রিনশট নিয়ে “আগাম পরের রোটেশন” স্কেচ করো।</div>
+      </div>
+      <div>
+        <h3>⚡ Rusher / Entry</h3>
+        <ul>
+          <li>ফাস্ট এন্ট্রি, কোণ ক্লিয়ার, ট্রেড ফোর্স করা।</li>
+          <li>মাইক্রো: জিগ-জ্যাগ, জাম্প-শট, কভার টু কভার।</li>
+          <li>ইউটিল: ফ্ল্যাশ/গ্রেনেড দিয়ে স্পেস ওপেন।</li>
+        </ul>
+
+        <h3>🛡️ Support</h3>
+        <ul>
+          <li>রিভাইভ/স্মোক/গ্লু-ওয়াল; ব্যাকলাইন অ্যাঙ্গেল হোল্ড।</li>
+          <li>রিসোর্স—হিল/অ্যামো/ইউটিল শেয়ার ট্র্যাক।</li>
+          <li>IGL কল রিপিট → সবাই হিয়ার কনফার্ম।</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="split" style="margin-top:10px">
+      <div>
+        <h3>🎯 Sniper</h3>
+        <ul>
+          <li>লং-রেঞ্জ ইনফো + ওপেনিং নক ক্রিয়েট।</li>
+          <li>হাই-গ্রাউন্ড/উইন্ডো অ্যাঙ্গেল; কাউন্টার-স্নাইপ কভার।</li>
+          <li>অ্যামো ডিসিপ্লিন: হাই ভ্যালু শট অনলি।</li>
+        </ul>
+      </div>
+      <div>
+        <h3>💣 Grenadier / Flex</h3>
+        <ul>
+          <li>নেইড লাইনআপ: স্টেয়ার/উইন্ডো/রুম ক্লিয়ার।</li>
+          <li>রোল-সুইচ: প্রয়োজন হলে সাপোর্ট/এন্ট্রি ফিল।</li>
+          <li>ইনিশিয়েট/ফিনিশ—ইউটিলে কিল কনভার্ট।</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout warn" style="margin-top:12px">
+      ভুল: ৫ জনেই ফ্র্যাগার—তখন সাপোর্ট/কমস/লেট-গেম হিল ভেঙে পড়ে।
+    </div>
+  </section>
+
+  <!-- Scouting -->
+  <section class="card" id="scouting">
+    <h2>Recruiting & Tryouts (Scouting)</h2>
+    <div class="split">
+      <div>
+        <h3>স্কাউটিং সোর্স</h3>
+        <ul>
+          <li>টুর্নামেন্ট লবি, কাস্টম রুম, স্ক্রিম ডিসকর্ড।</li>
+          <li>স্ট্যাট ট্র্যাক: K/D, AVG DMG, SURVIVAL, REVIVES।</li>
+          <li>ভাইব চেক: টিল্ট কন্ট্রোল, কমস ডিসিপ্লিন।</li>
+        </ul>
+        <h3>ট্রাইআউট প্ল্যান</h3>
+        <ol>
+          <li>৫ ম্যাচ: ২ এন্ট্রি, ১ স্নাইপ, ২ IGL কল ফলো টেস্ট।</li>
+          <li>রোলে রোল-লক, পোস্ট-গেম ডিব্রিফ ১০ মিনিট।</li>
+          <li>ভিওডি ক্লিপ রিভিউ—পজিশনিং/ইউটিল ইউসেজ।</li>
+        </ol>
+      </div>
+      <div>
+        <h3>ইভ্যালুয়েশন শিট</h3>
+        <table>
+          <thead><tr><th>মেট্রিক</th><th>টার্গেট</th><th>ক্যান্ডিডেট</th></tr></thead>
+          <tbody>
+            <tr><td>K/D</td><td>≥ 2.0</td><td>__</td></tr>
+            <tr><td>Survival</td><td>≥ 18m</td><td>__</td></tr>
+            <tr><td>Comms</td><td>Clear/Concise</td><td>__</td></tr>
+            <tr><td>Tilt Control</td><td>Stable</td><td>__</td></tr>
+            <tr><td>Utility</td><td>Timely</td><td>__</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice -->
+  <section class="card" id="practice">
+    <h2>Daily/Weekly Practice Plan</h2>
+    <div class="split">
+      <div>
+        <h3>ডেইলি (৯০–১২০ মিনিট)</h3>
+        <ul>
+          <li>১৫মি aim warmup (ট্র্যাকিং + ফ্লিক)</li>
+          <li>১৫মি utility drills (গ্লু/স্মোক/নেইড)</li>
+          <li>৪–৬ স্ক্রিম ম্যাচ (ফোকাস: ১ থিম/দিন)</li>
+          <li>১০মি পোস্ট-গেম ডিব্রিফ + টুডু</li>
+        </ul>
+        <h3>উইকলি</h3>
+        <ul>
+          <li>১ দিন VOD রিভিউ + স্ট্র্যাট আপডেট</li>
+          <li>১ দিন ম্যাপ-ক্রেট লাইনআপ প্র্যাকটিস</li>
+          <li>১টা ইনহাউস কাস্টম – রোল-সুইচ টেস্ট</li>
+        </ul>
+      </div>
+      <div>
+        <h3>ড্রিল চেকলিস্ট</h3>
+        <ul>
+          <li>রোটেশন কল টাইমিং ≤ 5s</li>
+          <li>রিভাইভ রেসপন্স ≤ 3s</li>
+          <li>ডুয়ো ট্রেড কিল রেশিও ≥ 0.8</li>
+          <li>লেট-গেম হিল/ইউটিল স্টক ≥ 2/3</li>
+        </ul>
+        <div class="callout">একদিনে একটাই ফোকাস: যেমন “জোন ৩ রোটেশন” বা “গ্রেনেড এক্সিকিউশন”।</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Macro -->
+  <section class="card" id="macro">
+    <h2>Macro Strategy (Big Picture)</h2>
+    <ul>
+      <li><strong>ড্রপ প্ল্যান:</strong> কমটেস্টেড সেফ ড্রপ + ২য় অপশন (কনিংজেন্সি)।</li>
+      <li><strong>রোটেশন:</strong> জোন ১–২ “ইন বেফোর এজ”, জোন ৩ এজ-হোল্ড, জোন ৪–৫ স্প
